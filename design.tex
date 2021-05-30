@@ -1,0 +1,23 @@
+\chapter{Design and Implementation}
+\label{cha:design}
+
+Same as the last chapter, give the motivation and the high-level
+picture of this chapter to readers, and introduce the sections in this
+chapter.
+
+\section{Converting Strategies for Crosshair}
+\label{sec:des-hotpath}
+
+The initial implementation for concolic testing was achieved by converting strategies into crosshair pre-conditions and symbolic inputs for testing with crosshair. Hypothesis strategies specify properties about test inputs to be generated. Thus, it's fairly straightforward to convert these properties into logical statements which can be evaluated by Python’s inbuilt eval function. For example, given a hypothesis test:
+
+\begin{figure}[H]
+    \lstinputlisting[linewidth=\textwidth,breaklines=true]{code/div_zero_test.py}
+    \caption{Failing Hypothesis Test}
+    \label{fig:python:hello}
+  \caption{Hello world in Java and C. This short caption is centered.}
+  \label{fig:helloworld}
+\end{figure}
+
+\section{Summary}
+Same as the last chapter, summarize what you discussed in this chapter and
+be a bridge to next chapter.

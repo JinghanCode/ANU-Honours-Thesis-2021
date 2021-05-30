@@ -1,0 +1,19 @@
+\chapter{Introduction}
+\label{cha:intro}
+Testing is a fundamental aspect of any software development. Bugs in software are unavoidable and can be detrimental for software quality. The disasters of software bugs have been well documented. A report from CISQ found that in 2020 the total cost of poor software quality was US\$2.08 trillion. There are also further overheads from coding bug fixes and reconfiguring software when patching bugs. Recently, there has been increasing adoption of CI/CD and automated testing workflows to alleviate some of these overheads. Despite this and the wide availability of open-source software testing tools, most software today is still not sufficiently tested. Part of the problem lies in the way we test software. 
+
+Unit testing is the most common method of software testing and involves testing a single software behaviour. A unit test can only show that a program works for the specific conditions outlined in the unit test. Thus, unit tests don’t find bugs beyond the behaviour specified in the test and the test inputs used. Consider an example where we are testing a function that sorts a list. The typical approach to unit testing such a function would be to come up with some inputs of a variety of sizes and then specifying test conditions such as the length of the output should not change etc. The bugs which can be found by our unit testing approach are limited to what inputs and conditions we specify. The problem is that humans can never write enough test cases to effectively test our program.
+
+Property based testing is a testing approach which addresses this problem. In property based testing we assert some logical properties that a test should fulfill and then attempt to generate examples to break those properties. The advantage of property based testing over traditional unit testing is that a single property based test gives us a wide variety of test cases whereas unit tests can only test for a single test case. Property based tests also allow us to feed our specifications for software correctness into tests. 
+
+In most software enforcing formal correctness is overkill. The purpose of this research is to exploit the benefits of solvers that test for program correctness to extend concrete testing for improved bug finding. 
+
+Hypothesis is a prominent property based testing library for python which utilizes concrete execution \Citet{MacIver2019}. In hypothesis tests properties are used to generate concrete test cases for testing code. Such tests are effective at catching bugs. However, Hypothesis fails when testing properties which have a low probability of being invalidated. Crosshair is another prominent property based testing library based on symbolic execution. In Crosshair tests a symbolic value is fed into tests and the test attempts to find a counterexample by executing all feasible program paths. Symbolic execution is useful for catching bugs which are program path dependent and wouldn’t otherwise be caught by Hypothesis. However, it does not scale well to large systems because the feasible execution paths increase exponentially with increase in program size. A solution to both the limitations of symbolic and concrete PBT is proposed by combining them. This is achieved by building support for running Hypothesis tests into Crosshair.
+
+
+\section{Report Outline}
+\label{sec:outline}
+
+How many chapters you have? You may have Chapter~,
+Chapter~\ref{cha:design}, Chapter~\ref{cha:methodology},
+Chapter~\ref{cha:result}, and Chapter~\ref{cha:conc}.
