@@ -11,7 +11,7 @@ in the chapter, e.g.\
   
 \section{Literature Review}
 \label{sec:literature_review}
-Hybrid concrete/symbolic testing was first pioneered by the testing tools DART and CUTE. In these tools symbolic execution is used during a concrete execution of a test case to generate logical conditions for paths encountered but not entered during the concrete execution. These path conditions are then used to generate new concrete test cases which explore further code paths. This aims to address the problem of code paths that have a low probability of executing when generating test cases. The result of this work is higher test coverage is achieved than using concrete testing alone. However, DART and CUTE are limited by their constraint solvers.
+Combining concrete execution and symbolic execution for testing was first pioneered by the concolic testing tools DART and CUTE. In these tools symbolic execution is used during a concrete execution of a test case to generate logical conditions for paths encountered but not entered during the concrete execution. These path conditions are then used to generate new concrete test cases which explore further code paths. This aims to address the problem of code paths that have a low probability of executing when generating test cases. The result of this work is higher test coverage is achieved than using concrete testing alone. DART and CUTE employ a singular testing backend whereas this research aims to explore hybrid testing via combining testing backends. 
 
 
 \section{Summary}
