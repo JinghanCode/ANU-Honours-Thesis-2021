@@ -1,24 +1,14 @@
 \chapter{Literature Review}
 \label{cha:literature_review}
 
-At the beginning of each chapter, please give the motivation and
-high-level picture of the chapter. You also have to introduce the sections
-in the chapter, e.g.\
-
-  Section~\ref{sec:literature_review} gives background material necessary in
-  order to read this report.
+TODO
 
   
 \section{Literature Review}
 \label{sec:literature_review}
 Combining concrete execution and symbolic execution for testing was first pioneered by the concolic testing tools DART and CUTE. In these tools symbolic execution is used during a concrete execution of a test case to generate logical conditions for paths encountered but not entered during the concrete execution. These path conditions are then used to generate new concrete test cases which explore further code paths. This aims to address the problem of code paths that have a low probability of executing when generating test cases. The result of this work is higher test coverage is achieved than using concrete testing alone. DART and CUTE employ a singular testing backend whereas this research aims to explore hybrid testing via combining testing backends. 
 
-
-\section{Summary}
-
-Summarize what you discussed in this chapter, and introduce the story
-of next chapter. Readers should roughly understand what your report
-talks about by only reading words at the beginning and the end
-(Summary) of each chapter.
+Hybrid Concrete/Symbolic testing differs from concolic testing in that hybrid approaches use a combination of independent testing engines. Rather than combining techniques in a single testing engine. 
+The concept of hybrid testing via running tests with multiple backends was inspired by (Citation)’s DeepState paper. DeepState provides a testing API which gives developers access to symbolic testing and fuzzing engines via generating 
 
 
